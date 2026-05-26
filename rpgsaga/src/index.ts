@@ -1,18 +1,25 @@
-export function sum(a: number, b: number): number {
-  return a + b;
+import { HeroFactory } from './factory/HeroFactory';
+import { GameEngine } from './game/GameEngine';
+
+function main() {
+    console.log('Добро пожаловать в Akvelon RPG SAGA!');
+
+    const playerCount = 4;
+    
+    try {
+        const heroes = HeroFactory.createHeroesArray(playerCount);
+        console.log('\nСозданные герои:');
+        heroes.forEach(hero => {
+            console.log(`${hero.toString()} | Здоровье: ${hero.health} | Сила: ${hero.strength}`);
+        });
+        
+        const game = new GameEngine(heroes);
+        const winner = game.start();
+        
+        console.log(`\nЧемпион: ${winner?.toString()}`);
+    } catch (error) {
+        console.error(error);
+    }
 }
 
-// Example usage of the addNumbers function
-console.log("Hello world");
-
-// Adding two integers
-const result1 = sum(5, 3);
-console.log(`5 + 3 = ${result1}`);
-
-// Adding two floating-point numbers
-const result2 = sum(2.5, 3.7);
-console.log(`2.5 + 3.7 = ${result2}`);
-
-// Adding an integer and a floating-point number
-const result3 = sum(10, 4.2);
-console.log(`10 + 4.2 = ${result3}`);
+main();
