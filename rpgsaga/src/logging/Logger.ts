@@ -16,13 +16,5 @@ export class Logger {
     static clear(): void {
         this.logs = [];
     }
-    
-    static saveToFile(): void {
-        const blob = new Blob([this.logs.join('\n')], { type: 'text/plain' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = this.LOG_FILE;
-        link.click();
-        URL.revokeObjectURL(link.href);
-    }
+
 }

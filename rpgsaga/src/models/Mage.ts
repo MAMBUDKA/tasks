@@ -9,7 +9,7 @@ export class Mage extends Hero {
     private static readonly IMMUNE_EFFECTS: EffectType[] = [EffectType.Freeze, EffectType.Poison];
     
     constructor(name: string, health: number, strength: number) {
-        super(name, strength, health);
+        super(name, health, strength);
     }
     
     calculateBaseDamage(): number {

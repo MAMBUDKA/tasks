@@ -19,8 +19,11 @@ export class FreezeEffect implements IEffect {
     }
     
     onTurnEnd(target: Hero): void {
-        target.takeDamage(this.damagePerTurn);
-        Logger.log(`${target.toString()} заморожен и теряет ${this.damagePerTurn} здоровья`);
+        if (this.remainingTurns > 0) {
+            target.takeDamage(this.damagePerTurn);
+            // this.remainingTurns--;
+            Logger.log(`${target.toString()} заморожен и теряет ${this.damagePerTurn} здоровья`);
+        }
     }
     
     merge(effect: IEffect): void {

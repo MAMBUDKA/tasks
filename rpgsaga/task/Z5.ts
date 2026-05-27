@@ -1,4 +1,4 @@
-class Phone {
+export class Phone {
     private brand: string;
     private model: string;
     private myNumber: string;

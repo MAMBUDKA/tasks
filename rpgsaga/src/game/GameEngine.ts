@@ -18,7 +18,7 @@ export class GameEngine {
         
         const winner = this.heroes[0];
         Logger.log(`\n========== ПОБЕДИТЕЛЬ: ${winner.toString()}! ==========`);
-        Logger.saveToFile();
+
         return winner;
     }
     

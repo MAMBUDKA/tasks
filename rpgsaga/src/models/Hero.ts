@@ -8,8 +8,8 @@ export abstract class Hero {
     
     constructor(
         public readonly name: string,
-        protected _strength: number,
-        initialHealth: number
+        initialHealth: number,        
+        protected _strength: number
     ) {
         this._health = initialHealth;
         this._maxHealth = initialHealth;
@@ -24,11 +24,12 @@ export abstract class Hero {
     takeDamage(damage: number): void {
         const actualDamage = this.modifyIncomingDamage(damage);
         this._health = Math.max(0, this._health - actualDamage);
-        Logger.log(`${this.toString()} получает ${actualDamage} урона. Осталось здоровья: ${this._health}`);
         
         if (!this.isAlive) {
             Logger.log(`${this.toString()} погибает!`);
         }
+
+        Logger.log(`${this.toString()} получает ${actualDamage} урона. Осталось здоровья: ${this._health}`);  
     }
     
     heal(amount: number): void {

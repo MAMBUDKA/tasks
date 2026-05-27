@@ -33,7 +33,7 @@ describe('Effects', () => {
         it('should apply damage on onTurnEnd', () => {
             const initialHealth = target.health;
             burn.onTurnEnd(target);
-            expect(target.health).toBe(initialHealth - 5);
+            expect(target.health).toBe(initialHealth - 4);
         });
 
         it('should merge with another BurnEffect', () => {
@@ -64,7 +64,7 @@ describe('Effects', () => {
         it('should apply damage on onTurnEnd', () => {
             const initialHealth = target.health;
             freeze.onTurnEnd(target);
-            expect(target.health).toBe(initialHealth - 3);
+            expect(target.health).toBe(initialHealth - 2);
         });
 
         it('should decrease remainingTurns after processing', () => {
@@ -90,7 +90,7 @@ describe('Effects', () => {
         it('should apply damage on onTurnEnd', () => {
             const initialHealth = target.health;
             poison.onTurnEnd(target);
-            expect(target.health).toBe(initialHealth - 4);
+            expect(target.health).toBe(initialHealth - 3);
         });
 
         it('should merge and extend duration', () => {

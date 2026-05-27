@@ -12,7 +12,7 @@ export class Archer extends Hero {
      private static readonly MAX_POISON_ARROWS = 3;
 
     constructor(name: string, health: number, strength: number) {
-        super(name, strength, health);
+        super(name, health, strength);
     }
     
     calculateBaseDamage(): number {

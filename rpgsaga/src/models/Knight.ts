@@ -3,7 +3,7 @@ import { Logger } from '../logging/Logger';
 
 export class Knight extends Hero {
     constructor(name: string, health: number, strength: number) {
-        super(name, strength, health);
+        super(name, health, strength);
     }
     
     calculateBaseDamage(): number {
