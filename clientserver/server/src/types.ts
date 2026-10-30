@@ -6,17 +6,17 @@ export interface Product {
   quantity: number;
   supplier: string;
   addedOn: string;
-  popularity: number;    // сколько раз покупали/резервировали
+  popularity: number;
   deleted: boolean;
 }
 
 export interface Customer {
-  id: string;            // UUID
+  id: string;
   customerNumber: number;
   name: string;
   birthday: string;
   deleted: boolean;
-  rating: number;        // всего покупок за всё время
+  rating: number;
 }
 
 export interface ProductStatus {
