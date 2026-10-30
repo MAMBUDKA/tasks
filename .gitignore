@@ -1,7 +1,21 @@
+# dependencies
 node_modules/
+
+# build
 dist/
-coverage/
+client/dist/
+server/dist/
+
+# env & logs
+.env
+.env.*
 *.log
+
+# editor / OS
 .DS_Store
-.env.local
-.env.*.local
+.idea/
+.vscode/
+
+# vite cache
+client/.vite/
+client/node_modules/.vite/

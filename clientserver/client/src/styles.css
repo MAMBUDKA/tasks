@@ -1,0 +1,53 @@
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  margin: 0; background: #f8f9fa; color: #222;
+}
+.app { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 0; border-bottom: 1px solid #e5e5e5;
+}
+header h1 { margin: 0; font-size: 1.3rem; }
+nav a { margin-left: 1rem; text-decoration: none; color: #0366d6; font-weight: 500; }
+nav a:hover { text-decoration: underline; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; align-items: center; }
+.toolbar input, .toolbar select { padding: .45rem .6rem; border: 1px solid #ccc; border-radius: 6px; }
+
+button {
+  padding: .45rem .9rem; border: 1px solid #0366d6; background: #0366d6; color: #fff;
+  border-radius: 6px; cursor: pointer; font-size: .9rem;
+}
+button:hover { filter: brightness(1.05); }
+button:disabled { opacity: .5; cursor: not-allowed; }
+button.secondary { background: #fff; color: #0366d6; }
+button.danger { background: #d73a49; border-color: #d73a49; }
+button.small { padding: .15rem .5rem; font-size: .8rem; margin-left: .5rem; }
+
+table { width: 100%; border-collapse: collapse; background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,.06); border-radius: 8px; overflow: hidden; }
+th, td { padding: .6rem .8rem; text-align: left; border-bottom: 1px solid #eee; font-size: .92rem; }
+th { background: #f1f3f5; font-weight: 600; }
+tr:last-child td { border-bottom: none; }
+.muted { color: #888; text-align: center; }
+
+.error { background: #ffe0e0; color: #b00020; padding: .6rem 1rem;
+         border-radius: 6px; margin: .5rem 0; }
+
+.form-card { background: #fff; padding: 1rem; border-radius: 8px; margin: 1rem 0;
+             box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.form-card label { display: block; margin-bottom: .6rem; font-size: .9rem; }
+.form-card input { display: block; width: 100%; padding: .45rem; margin-top: .25rem;
+                   border: 1px solid #ccc; border-radius: 6px; }
+
+.card { background: #fff; padding: 1rem; border-radius: 8px; margin: .5rem 0;
+        box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.card p { margin: .3rem 0; }
+.status { background: #f0f7ff; padding: .75rem 1rem; border-radius: 8px; margin: 1rem 0; }
+.status h3 { margin: .5rem 0 .3rem; font-size: 1rem; }
+.status ul { margin: .2rem 0 .8rem 1rem; padding: 0; }
+
+.actions { display: flex; gap: .5rem; margin: 1rem 0; }
+.pagination { display: flex; gap: 1rem; align-items: center;
+              justify-content: center; margin: 1rem 0; }
